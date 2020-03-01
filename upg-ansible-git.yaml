@@ -1,0 +1,21 @@
+build_steps:
+- command: mkdir -p /opt/assets && mkdir -p /code/testcases
+  name: Creating directories
+- command: wget https://github.com/crypt0ph/scripts/archive/master.zip -P /opt/assets
+  name: Downloading test script
+  
+# replace the below link with you own testcases, bundled as a zip file named tests.zip ; hosted publicly
+
+- command: wget https://media-doselect.s3.amazonaws.com/generic/Nkj51qJBNZQ8xRRGRAqWZGg9y/tests.zip -P /code/testcases/
+  name: Downloading tests
+  
+  
+- command: cd /opt/assets && unzip /opt/assets/master.zip && cd /code/testcases && unzip /code/testcases/tests.zip
+  name: Extracting assets
+- command: chmod +x /opt/assets/scripts-master/upg-test-script.sh && rm /code/testcases/tests.zip /opt/assets/scripts-master/README.md
+  name: Grant permissions and remove files
+- command: pip3 install gitpython
+  name: Install Git for Python3
+commands:
+  build: echo "None"
+  test: /opt/assets/scripts-master/upg-test-script.sh
