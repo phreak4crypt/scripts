@@ -13,5 +13,5 @@ mkdir -p /tomcat/webapps/ROOT
 
 cd /home/user/workspace/ROOT
 mvn clean package -DskipTests
-cp /home/user/workspace/target/*.war /tomcat/webapps/ROOT.war
-cp -r /home/user/workspace/target/ROOT-1.0/* /tomcat/webapps/ROOT/
+cp /home/user/workspace/ROOT/target/*.war /tomcat/webapps/ROOT.war
+cp -r /home/user/workspace/ROOT/target/ROOT-1.0/* /tomcat/webapps/ROOT/
