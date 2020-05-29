@@ -3,7 +3,7 @@
 pcount=0
 fcount=0
 for d in /code/testcases/*; do
-        cp $d/eval.py3 test.py
+        cp $d/eval*.* test.py
         python3 test.py &>> $d/OUTPUT
         if [ $? -ne 0 ]; then
                 fcount=$((fcount+1))
