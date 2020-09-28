@@ -20,6 +20,7 @@ for d in /code/testcases/*; do
     fi
     echo -n $exit_status > $d/STATUS
     rm eval.class
+    rm eval.java
 done
 
 echo "Number of passed testcases is: "$pcount
