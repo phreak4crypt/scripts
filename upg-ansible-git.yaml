@@ -16,6 +16,11 @@ build_steps:
   name: Grant permissions and remove files
 - command: pip3 install gitpython
   name: Install Git for Python3
+- command: apt -y
+  name: daljda
 commands:
   build: echo "None"
   test: /opt/assets/scripts-master/upg-test-script.sh
+
+# fljksflkjsklfsl;fl;s
+
